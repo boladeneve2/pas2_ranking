@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import streamlit as st
 
 st.header("This is a header", divider="rainbow")
@@ -49,23 +48,6 @@ def get_dict():
     return dict_notas_totais
 
 
-def histogram(dict_notas_totais):
-    values = list(dict_notas_totais.keys())
-    frequencies = list(dict_notas_totais.values())
-
-    # Set the bin edges from -20 to 85, with a step of 5
-    bins = list(range(-15, 90, 5))  # Range from -20 to 85 with steps of 5
-
-    # Create the histogram
-    plt.hist(values, bins=bins, weights=frequencies, edgecolor='black', align='left')
-
-    # Add labels and title
-    plt.xlabel('Notas')
-    plt.ylabel('Frequência')
-    plt.title('Notas do PAS 2')
-
-    # Show the plot
-    plt.show()
 
 def rank_nota(nota_usuario):
     qnt_candidatos = 0

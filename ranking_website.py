@@ -1,6 +1,7 @@
 import streamlit as st
 
-st.header("This is a header", divider="rainbow")
+st.header("Digite sua nota do PAS 2", divider="rainbow")
+st.markdown("ignore o resto")
 def get_medias():
     with open('.idea/text_files/pas2_resultado_limpo.txt', "r") as file:
         total_total = 0

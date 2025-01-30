@@ -3,7 +3,7 @@ import streamlit as st
 st.header("Digite sua nota do PAS 2", divider="rainbow")
 st.markdown("ignore o resto")
 def get_medias():
-    with open('.idea/text_files/pas2_resultado_limpo.txt', "r") as file:
+    with open('pas2_resultado_limpo.txt', "r") as file:
         total_total = 0
         total_ingles = 0
         total_discursiva = 0
@@ -32,7 +32,7 @@ def get_medias():
 
 def get_dict():
     dict_notas_totais = {}
-    with open('.idea/text_files/pas2_resultado_limpo.txt', "r") as file:
+    with open('pas2_resultado_limpo.txt', "r") as file:
         for x, i in enumerate(file):
             data_student = i.split(",")
             nome, nota_ingles, nota_total, nota_discursiva, nota_redacao = data_student[1], float(
@@ -55,7 +55,7 @@ def rank_nota(nota_usuario):
     nota_maior_que_usuario = 0
     nota_menor_que_usuario = 0
     nota_igual_usuario = 0
-    with open('.idea/text_files/pas2_resultado_limpo.txt', "r") as file:
+    with open('pas2_resultado_limpo.txt', "r") as file:
         for x, i in enumerate(file):
             data_student = i.split(",")
             nome, nota_ingles, nota_total, nota_discursiva, nota_redacao = data_student[1], float(
